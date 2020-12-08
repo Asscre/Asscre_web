@@ -1,6 +1,8 @@
 <template>
-  <Header />
-  <Body />
+  <main class="main">
+    <Header />
+    <Body />
+  </main>
 </template>
 
 <script>
@@ -15,3 +17,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.main {
+  min-width: 640px;
+  height: 100%;
+}
+</style>
