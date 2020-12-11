@@ -7,6 +7,7 @@
       </div>
       <div class="body_box_works">
         <works-nav-widget />
+        <works-widget />
       </div>
     </div>
   </body>
@@ -16,13 +17,15 @@
 import HotWidget from "./hot_widget";
 import MeWidget from "./me_widget";
 import WorksNavWidget from "./works_nav_widget.vue";
+import WorksWidget from "./works_widget.vue";
 
 export default {
   name: "Body",
   components: {
     HotWidget,
     MeWidget,
-    WorksNavWidget
+    WorksNavWidget,
+    WorksWidget
   },
   setup() {}
 };
@@ -31,9 +34,7 @@ export default {
 <style lang="scss" scoped>
 .body {
   padding-top: 20px;
-  height: calc(100% - 60px);
   width: 100%;
-  background-color: #f8fafc;
 
   &_box {
     margin: 0 auto;

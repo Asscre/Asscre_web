@@ -22,5 +22,7 @@ export default {
 .main {
   min-width: 640px;
   height: 100%;
+  overflow: auto;
+  background-color: #f8fafc;
 }
 </style>

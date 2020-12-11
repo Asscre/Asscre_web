@@ -53,7 +53,7 @@ function setMake() {
   position: relative;
   height: 60px;
   width: 100%;
-  color: #fff;
+  background-color: #fff;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid hsla(210, 8%, 51%, 0.09);
 

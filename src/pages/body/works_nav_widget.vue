@@ -2,9 +2,14 @@
   <div class="works_nav">
     <div class="works_nav_tilte">作品推荐</div>
     <div class="works_nav_li">
-      <p>Web作品</p>
-      <p>Flutter作品</p>
-      <p>Go作品</p>
+      <p
+        v-for="(item, index) in makeList"
+        :key="index"
+        :class="{ nav_active: item.active }"
+        @click="selectNavLi(index)"
+      >
+        {{ item.name }}
+      </p>
     </div>
     <div class="works_nav_most">
       <p>更多</p>
@@ -13,8 +18,37 @@
 </template>
 
 <script>
+import { reactive } from "vue";
+
 export default {
-  name: "works_nav"
+  name: "works_nav",
+
+  setup() {
+    let makeList = reactive([
+      {
+        name: "Web·作品",
+        active: true
+      },
+      {
+        name: "Flutter·作品",
+        active: false
+      },
+      {
+        name: "Go·作品",
+        active: false
+      }
+    ]);
+
+    function selectNavLi(index) {
+      this.makeList.forEach(item => {
+        item.active = false;
+      });
+
+      this.makeList[index].active = true;
+    }
+
+    return { makeList, selectNavLi };
+  }
 };
 </script>
 
@@ -37,6 +71,8 @@ export default {
 
     p {
       margin-right: 30px;
+      letter-spacing: 1px;
+      cursor: pointer;
     }
 
     :last-child {
@@ -48,6 +84,15 @@ export default {
     margin: auto;
     margin-right: 0;
     color: #50a1ff;
+    cursor: pointer;
   }
+
+  &_most:active {
+    color: #1d78df;
+  }
+}
+
+.nav_active {
+  color: #50a1ff;
 }
 </style>
