@@ -28,7 +28,7 @@ export default {
   setup() {
     let { make, gernerateId } = setMake();
     return { make, gernerateId };
-  },
+  }
 };
 
 function setMake() {
@@ -39,7 +39,7 @@ function setMake() {
       0: "icon-qianduan",
       1: "icon-flutter",
       2: "icon-gopher",
-      3: "icon-biaotilogo",
+      3: "icon-biaotilogo"
     };
     return "iconfont " + iconList[index];
   }
