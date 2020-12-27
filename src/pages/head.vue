@@ -28,7 +28,7 @@ export default {
   setup() {
     let { make, gernerateId } = setMake();
     return { make, gernerateId };
-  }
+  },
 };
 
 function setMake() {
@@ -39,7 +39,7 @@ function setMake() {
       0: "icon-qianduan",
       1: "icon-flutter",
       2: "icon-gopher",
-      3: "icon-biaotilogo"
+      3: "icon-biaotilogo",
     };
     return "iconfont " + iconList[index];
   }
@@ -97,7 +97,11 @@ function setMake() {
       }
 
       div:hover {
-        color: cornflowerblue;
+        color: #50a1ff;
+      }
+
+      div:active {
+        color: #1d78df;
       }
 
       :nth-child(1) {
@@ -131,13 +135,13 @@ function setMake() {
         }
 
         &_li:hover {
-          color: cornflowerblue;
+          color: #50a1ff;
         }
       }
     }
 
     &_mun:hover {
-      color: cornflowerblue;
+      color: #50a1ff;
     }
 
     &_mun:focus .main_mun_psn {

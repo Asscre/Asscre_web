@@ -9,6 +9,10 @@
         <works-nav-widget />
         <works-widget />
       </div>
+      <div class="body_box_document">
+        <document-nav-widget />
+        <document-widget />
+      </div>
     </div>
   </body>
 </template>
@@ -18,6 +22,8 @@ import HotWidget from "./hot_widget";
 import MeWidget from "./me_widget";
 import WorksNavWidget from "./works_nav_widget.vue";
 import WorksWidget from "./works_widget.vue";
+import DocumentNavWidget from './document_nav_widget.vue';
+import DocumentWidget from './document_widget';
 
 export default {
   name: "Body",
@@ -25,7 +31,9 @@ export default {
     HotWidget,
     MeWidget,
     WorksNavWidget,
-    WorksWidget
+    WorksWidget,
+    DocumentNavWidget,
+    DocumentWidget,
   },
   setup() {}
 };

@@ -75,12 +75,17 @@ export default {
 
   &_li {
     margin: 20px 30px;
+    padding: 20px;
     width: 242px;
     height: 280px;
     background: #fff;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     cursor: pointer;
+
+    &_img {
+      height: 1;
+    }
   }
 }
 </style>
