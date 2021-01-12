@@ -11,6 +11,7 @@
         {{ item.name }}
       </p>
     </div>
+    <p>{{ dataA }}</p>
     <div class="works_nav_most">
       <p>更多</p>
     </div>
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import { reactive } from "vue";
+import { reactive, inject } from "vue";
 
 export default {
   name: "works_nav",
@@ -47,7 +48,9 @@ export default {
       this.makeList[index].active = true;
     }
 
-    return { makeList, selectNavLi };
+    const dataA = inject("dataA");
+
+    return { makeList, selectNavLi, dataA };
   }
 };
 </script>

@@ -24,6 +24,7 @@ import WorksNavWidget from "./works_nav_widget.vue";
 import WorksWidget from "./works_widget.vue";
 import DocumentNavWidget from "./document_nav_widget.vue";
 import DocumentWidget from "./document_widget";
+import { provide } from "vue";
 
 export default {
   name: "Body",
@@ -35,7 +36,9 @@ export default {
     DocumentNavWidget,
     DocumentWidget
   },
-  setup() {}
+  setup() {
+    provide("dataA", "Hello, I'm Asscre!");
+  }
 };
 </script>
 
